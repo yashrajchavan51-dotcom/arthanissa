@@ -1,186 +1,165 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>About Us — Arthanisa Design Studio</title>
-<meta name="description" content="Arthanisa Design Studio was founded by Ar. Meher Chouparne and co-founded by Ar. Sidhu Shaikh in Thane, Mumbai — offering planning, design, detailing and liaison services under one roof.">
+<meta name="description" content="About Arthanisa Design Studio, its visionaries, team, expertise and institutional associations.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- ================= HEADER ================= -->
 <header class="site-header">
-  <div class="wrap">
-    <a href="index.html" class="logo">
-      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M5 32 L20 7 L35 32" stroke="#AD8236" stroke-width="2"/>
-        <path d="M12.5 32 V19 H27.5 V32" stroke="#201F1C" stroke-width="1.4"/>
-        <circle cx="20" cy="7" r="2.1" fill="#AD8236"/>
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo" aria-label="Arthanisa Design Studio home">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <path d="M5 32 L20 7 L35 32" stroke="#B78A3C" stroke-width="2"/>
+        <path d="M12.5 32 V19 H27.5 V32" stroke="#222321" stroke-width="1.4"/>
+        <circle cx="20" cy="7" r="2.1" fill="#B78A3C"/>
       </svg>
       <span>
         <span class="logo-word">ARTHANI<em>SA</em></span>
         <span class="logo-sub">Design Studio · Thane</span>
       </span>
     </a>
-    <nav class="nav">
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="is-active">About Us</a></li>
-        <li><a href="projects.html">Our Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-      <a href="contact.html" class="btn btn--gold nav-cta">Get in Touch</a>
-      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-panel">
+      <span>Menu</span>
+      <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+    </button>
   </div>
 </header>
 
-<!-- ================= PAGE HERO ================= -->
+<div class="menu-panel" id="menu-panel" aria-hidden="true">
+  <div class="wrap menu-panel-inner">
+    <nav class="menu-main" aria-label="Main navigation">
+      <a href="index.html" >Home</a>
+      <a href="about.html" class="is-active">About Us</a>
+      <a href="projects.html" >Our Projects</a>
+      <a href="contact.html" >Contact</a>
+    </nav>
+    <aside class="menu-side">
+      <div class="menu-side-card">
+        <strong>Studio</strong>
+        <p>Architecture &amp; Interior Design<br>Thane, Mumbai</p>
+      </div>
+      <div class="menu-side-card">
+        <strong>Explore</strong>
+        <p>Vision · Our Team · Empanelment · Selected Projects</p>
+      </div>
+      <div class="menu-side-card">
+        <strong>Social Media</strong>
+        <div class="menu-social">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<main>
+
 <section class="page-hero">
-  <div class="hero-grid"></div>
   <div class="wrap">
-    <div class="eyebrow">About the studio</div>
-    <h1>A meaningful niche in every home we shape</h1>
-    <p class="lede">Arthanisa is an architecture and interior design studio based in Thane, Mumbai — founded on the belief that good design starts with meaning, not just measurements.</p>
+    <div class="eyebrow">About Us</div>
+    <h1>A studio built around meaningful spaces.</h1>
+    <p class="lede">The home page introduces the studio. This page carries the deeper story, visionaries, team, expertise and institutional associations from the wireframe.</p>
   </div>
 </section>
 
-<!-- ================= ORIGIN STORY ================= -->
 <section class="section">
-  <div class="wrap">
-    <div class="philosophy">
-      <blockquote class="reveal">The word itself is a promise: <em>Arth</em> — meaningful, <em>Nisa</em> — home.</blockquote>
-      <div class="reveal">
-        <p class="lede">ARTHANISA, the word, has its roots in the Sanskrit language — an amalgamation of two words: <em>Arth</em>, which means meaningful, and <em>Nisa</em>, which translates to home. We believe in creating meaningful, niche spaces in people&rsquo;s lives — that&rsquo;s their homes. That&rsquo;s what Arthanisa literally translates into.</p>
-        <p class="lede">ARTHANISA is the brainchild of Ar. Meher Chouparne, co-founded by Ar. Sidhu Shaikh, based in Thane, Mumbai — with a view to provide quality architectural services under one roof, such as planning, designing, detailing and liaison services. Our approach prioritises simplicity, warmth and honesty. We, as a firm, provide architectural and interior design solutions regardless of the scale and size of the project.</p>
-        <p class="lede">Ar. Meher Chouparne and Ar. Sidhu Shaikh are the Principal Architects and founding partners of this firm. At ARTHANISA, we believe in providing top-quality service in a fair and responsible way, without compromising on our values and principles.</p>
-      </div>
+  <div class="wrap story-grid">
+    <div><div class="eyebrow reveal">About Arthanisa</div><h2 class="reveal">The story behind the studio.</h2></div>
+    <div class="story-copy">
+      <p class="reveal">ARTHANISA, the word, has its roots in Sanskrit — an amalgamation of “Arth”, meaning meaningful, and “Nisa”, which translates to home. The studio’s belief is to create meaningful, niche spaces in people’s lives.</p>
+      <p class="reveal">ARTHANISA is the brainchild of Ar. Meher Chouparne, co-founded by Ar. Sidhu Shaikh, based in Thane, Mumbai. The practice brings planning, designing, detailing and liaison services together under one roof.</p>
+      <p class="reveal">The studio’s approach prioritises simplicity, warmth and responsible design, providing architectural and interior design solutions regardless of the scale and size of the project.</p>
     </div>
   </div>
 </section>
 
-<!-- ================= FOUNDERS ================= -->
-<section class="section grid-line-top">
-  <div class="wrap">
-    <div class="eyebrow reveal">Principal architects</div>
-    <h2 class="reveal" style="font-size:clamp(28px,3.6vw,44px); max-width:16ch;">Founding partners</h2>
+<section class="section section-border">
+  <div class="wrap vision-block">
+    <div><div class="eyebrow reveal">Vision</div><h2 class="reveal">Design that enhances life.</h2></div>
+    <div class="vision-quote reveal">“We believe in creating spaces that are <em>meaningful</em>, practical and considered — not simply spaces that look good.”</div>
+  </div>
+</section>
 
-    <div class="founders reveal">
-      <div class="founder">
-        <div class="founder-photo"><span class="initials">MC</span></div>
-        <h3>Ar. Meher Chouparne</h3>
-        <span class="role">Founder &amp; Principal Architect</span>
-        <p>The originating force behind Arthanisa. Meher&rsquo;s approach centres on simplicity and warmth — treating every project, regardless of scale, as a chance to build a genuinely meaningful space for the people who&rsquo;ll live in it.</p>
-      </div>
-      <div class="founder">
-        <div class="founder-photo"><span class="initials">SS</span></div>
-        <h3>Ar. Sidhu Shaikh</h3>
-        <span class="role">Co-Founder &amp; Principal Architect</span>
-        <p>Co-founder and Principal Architect, overseeing design detailing and on-ground execution — making sure the studio&rsquo;s standard of quality holds from first sketch to final handover.</p>
-      </div>
+<section class="section section-border">
+  <div class="wrap">
+    <div class="eyebrow reveal">Visionaries</div>
+    <h2 class="reveal" style="font-size:clamp(42px,5vw,68px);max-width:10ch">Meet the principals.</h2>
+    <div class="team-grid">
+      <article class="team-card reveal">
+        <div class="team-photo"><span>MC</span></div>
+        <h3>Ar. Meher Chouparne</h3><div class="team-role">Founder &amp; Principal Architect</div>
+        <p>Write-up from the visionary to be placed here, based on the client-approved profile and experience.</p>
+      </article>
+      <article class="team-card reveal">
+        <div class="team-photo"><span>SS</span></div>
+        <h3>Ar. Sidhu Shaikh</h3><div class="team-role">Co-Founder &amp; Principal Architect</div>
+        <p>Write-up from the visionary to be placed here, based on the client-approved profile and experience.</p>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ================= APPROACH / VALUES ================= -->
-<section class="section section--dark">
+<section class="section section-border">
   <div class="wrap">
-    <div class="eyebrow reveal">Our approach</div>
-    <h2 class="reveal" style="color:#FBFAF7; font-size:clamp(28px,3.6vw,44px); max-width:18ch;">Simplicity, warmth and honesty — at any scale</h2>
-    <div class="value-list reveal">
-      <div class="value-item">
-        <h4 style="color:#FBFAF7;">Simplicity</h4>
-        <p>Design decisions that hold up over time, not trends that fade in a season.</p>
-      </div>
-      <div class="value-item">
-        <h4 style="color:#FBFAF7;">Warmth</h4>
-        <p>Spaces designed to feel lived-in and personal, never sterile or generic.</p>
-      </div>
-      <div class="value-item">
-        <h4 style="color:#FBFAF7;">Integrity</h4>
-        <p>Fair, transparent, responsible service — no compromise on our principles.</p>
-      </div>
-      <div class="value-item">
-        <h4 style="color:#FBFAF7;">Attention</h4>
-        <p>Close involvement in planning, detailing and liaison, start to finish.</p>
-      </div>
+    <div class="eyebrow reveal">Our Team</div>
+    <h2 class="reveal" style="font-size:clamp(42px,5vw,68px);max-width:10ch">People behind the work.</h2>
+    <div class="expertise-list">
+      <div class="expertise-item reveal"><span class="num">01</span><h3>Architects</h3><p>Team member profiles and roles can be added here from the client-approved team list.</p></div>
+      <div class="expertise-item reveal"><span class="num">02</span><h3>Interior Designers</h3><p>Profiles, photographs and designation details can be placed here without crowding the page.</p></div>
+      <div class="expertise-item reveal"><span class="num">03</span><h3>Technical Team</h3><p>Drafting, detailing and execution support presented as part of the studio team.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ================= WHAT WE OFFER ================= -->
-<section class="section grid-line-top">
+<section class="section section-border">
   <div class="wrap">
-    <div class="eyebrow reveal">Under one roof</div>
-    <h2 class="reveal" style="font-size:clamp(28px,3.6vw,44px); max-width:16ch;">What we offer</h2>
-    <div class="process reveal">
-      <div class="process-item">
-        <span class="step">Planning</span>
-        <div>
-          <h4>Site &amp; layout planning</h4>
-          <p>Understanding the site, the brief and the way a space will actually be used, before a single line is drawn.</p>
-        </div>
-      </div>
-      <div class="process-item">
-        <span class="step">Design</span>
-        <div>
-          <h4>Architectural &amp; interior design</h4>
-          <p>Concept through construction drawings, covering both the building and the interiors within it.</p>
-        </div>
-      </div>
-      <div class="process-item">
-        <span class="step">Detailing</span>
-        <div>
-          <h4>Material &amp; execution detailing</h4>
-          <p>Hands-on site involvement so the built result matches the design intent, down to the smallest junction.</p>
-        </div>
-      </div>
-      <div class="process-item">
-        <span class="step">Liaison</span>
-        <div>
-          <h4>Approvals &amp; liaison services</h4>
-          <p>Coordination with municipal and government bodies to keep approvals moving, on your behalf.</p>
-        </div>
-      </div>
+    <div class="empanelment-head">
+      <div><div class="eyebrow reveal">Empanelment</div><h2 class="reveal">Institutional associations.</h2></div>
+      <p class="lede reveal">The organisations below are the client-provided associations from the wireframe. Final official logo files can replace the typographic marks in each card.</p>
+    </div>
+    <div class="logo-grid">
+      <div class="org-card reveal"><div class="org-mark">MMRDA</div><div class="org-name">MMRDA</div><div class="org-sub">Mumbai Metropolitan Region Development Authority</div></div>
+      <div class="org-card reveal"><div class="org-mark">TMC</div><div class="org-name">TMC</div><div class="org-sub">Thane Municipal Corporation</div></div>
+      <div class="org-card reveal"><div class="org-mark">PWD</div><div class="org-name">PWD</div><div class="org-sub">Public Works Department</div></div>
+      <div class="org-card reveal"><div class="org-mark">MHADA</div><div class="org-name">MHADA</div><div class="org-sub">Maharashtra Housing &amp; Area Development Authority</div></div>
+      <div class="org-card reveal"><div class="org-mark">MbPA</div><div class="org-name">MbPA</div><div class="org-sub">Mumbai Port Authority</div></div>
     </div>
   </div>
 </section>
 
-<!-- ================= ENGAGEMENTS ================= -->
-<section class="section section--tight">
+<section class="section section-border">
   <div class="wrap">
-    <div class="eyebrow reveal">Engagements</div>
-    <h2 class="reveal" style="font-size:clamp(24px,3vw,34px); max-width:20ch;">Work &amp; coordination with institutional bodies</h2>
-    <div class="engagements reveal">
-      <div class="engagement">IIT Bombay</div>
-      <div class="engagement">Thane Municipal Corporation</div>
-      <div class="engagement">Public Works Department</div>
-      <div class="engagement">MHADA</div>
+    <div class="eyebrow reveal">Our Expertise</div>
+    <h2 class="reveal" style="font-size:clamp(42px,5vw,68px);max-width:10ch">Under one roof.</h2>
+    <div class="expertise-list">
+      <div class="expertise-item reveal"><span class="num">01</span><h3>Planning &amp; Design</h3><p>Understanding the site, brief and intended use before design development.</p></div>
+      <div class="expertise-item reveal"><span class="num">02</span><h3>Interiors</h3><p>Architectural and interior design considered together rather than as separate layers.</p></div>
+      <div class="expertise-item reveal"><span class="num">03</span><h3>Detailing &amp; Execution</h3><p>Material and construction detailing carried through to site execution.</p></div>
+      <div class="expertise-item reveal"><span class="num">04</span><h3>Liaison</h3><p>Coordination with municipal and government bodies for relevant approvals.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ================= CTA ================= -->
 <section class="cta-band">
   <div class="wrap">
-    <div class="eyebrow reveal" style="justify-content:center;">Work with us</div>
-    <h2 class="reveal">Let&rsquo;s design your next space, together.</h2>
-    <div class="cta-actions reveal">
-      <a href="contact.html" class="btn btn--gold">Get in Touch</a>
-      <a href="projects.html" class="btn btn--on-dark">See Our Work</a>
-    </div>
+    <div class="eyebrow reveal" style="justify-content:center">Get in Touch</div>
+    <h2 class="reveal">Let’s discuss your next space.</h2>
+    <div class="cta-actions reveal"><a class="btn btn--gold" href="contact.html">Get in Touch</a><a class="btn" href="projects.html">See Our Projects</a></div>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+</main>
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <span class="logo-word">ARTHANI<em style="color:#C79E4E;font-style:normal;">SA</em></span>
-        <p>An architecture &amp; interior design studio based in Thane, Mumbai — planning, design, detailing and liaison services, under one roof.</p>
+        <span class="logo-word">ARTHANI<em>SA</em></span>
+        <p>Architecture &amp; interior design studio based in Thane, Mumbai.</p>
       </div>
       <div class="footer-col">
         <h5>Studio</h5>
@@ -188,30 +167,30 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="projects.html">Our Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Get in Touch</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Services</h5>
+        <h5>Focus</h5>
         <ul>
-          <li><a href="about.html">Planning &amp; Design</a></li>
-          <li><a href="about.html">Interior Design</a></li>
-          <li><a href="about.html">Detailing &amp; Execution</a></li>
-          <li><a href="about.html">Liaison Services</a></li>
+          <li><a href="about.html">Architecture</a></li>
+          <li><a href="about.html">Interiors</a></li>
+          <li><a href="about.html">Landscaping</a></li>
+          <li><a href="about.html">Liaison</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Studio, Thane</h5>
+        <h5>Connect</h5>
         <ul>
-          <li><a href="https://www.google.com/maps/place/Arthanisa+Design+Studio/@19.1889408,72.9808896,14z" target="_blank" rel="noopener">Get Directions</a></li>
-          <li><a href="mailto:studio@arthanisa.com">studio@arthanisa.com</a></li>
-          <li><a href="tel:+910000000000">+91 00000 00000</a></li>
+          <li><a href="contact.html">Studio details</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Arthanisa Design Studio. All rights reserved.</span>
-      <span>Design &amp; Interiors, Thane · Mumbai</span>
+      <span>© 2026 Arthanisa Design Studio</span>
+      <span>Thane · Mumbai</span>
     </div>
   </div>
 </footer>
