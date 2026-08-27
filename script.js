@@ -10,11 +10,11 @@ const closeMenu = () => {
 };
 
 const onScroll = () => {
+  if (navLinks && navLinks.classList.contains('is-open')) closeMenu(); // any scroll closes an open menu instantly
   const wasScrolled = header.classList.contains('is-scrolled');
   const isScrolled = window.scrollY > 40;
   if (isScrolled !== wasScrolled) {
     header.classList.toggle('is-scrolled', isScrolled);
-    closeMenu(); // crossing the scroll threshold changes the menu's layout — always start closed
   }
 };
 onScroll();
