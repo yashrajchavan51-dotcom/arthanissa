@@ -1,23 +1,41 @@
 // Header scroll state
 const header = document.querySelector('.site-header');
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+const navMenu = document.querySelector('.nav-menu');
+
+const closeMenu = () => {
+  if (navLinks) navLinks.classList.remove('is-open');
+  if (navToggle) navToggle.classList.remove('is-active');
+};
+
 const onScroll = () => {
-  if (window.scrollY > 40) header.classList.add('is-scrolled');
-  else header.classList.remove('is-scrolled');
+  const wasScrolled = header.classList.contains('is-scrolled');
+  const isScrolled = window.scrollY > 40;
+  if (isScrolled !== wasScrolled) {
+    header.classList.toggle('is-scrolled', isScrolled);
+    closeMenu(); // crossing the scroll threshold changes the menu's layout — always start closed
+  }
 };
 onScroll();
 window.addEventListener('scroll', onScroll, { passive: true });
 
-// Mobile nav toggle
-const navToggle = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
+// Menu toggle (full row up top on wide screens; compact dropdown once scrolled or on narrow screens)
 if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
+  navToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
     navLinks.classList.toggle('is-open');
     navToggle.classList.toggle('is-active');
   });
   navLinks.querySelectorAll('a').forEach(a =>
-    a.addEventListener('click', () => navLinks.classList.remove('is-open'))
+    a.addEventListener('click', closeMenu)
   );
+  document.addEventListener('click', (e) => {
+    if (navMenu && !navMenu.contains(e.target)) closeMenu();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
 }
 
 // Scroll reveal
