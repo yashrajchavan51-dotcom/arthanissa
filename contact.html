@@ -1,134 +1,175 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact — Arthanisa Design Studio</title>
-<meta name="description" content="Contact Arthanisa Design Studio, Thane.">
+<meta name="description" content="Get in touch with Arthanisa Design Studio, Thane — for architecture, interior design, planning and liaison services.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- ================= HEADER ================= -->
 <header class="site-header">
-  <div class="wrap header-inner">
-    <a href="index.html" class="logo" aria-label="Arthanisa Design Studio home">
-      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-        <path d="M5 32 L20 7 L35 32" stroke="#B78A3C" stroke-width="2"/>
-        <path d="M12.5 32 V19 H27.5 V32" stroke="#222321" stroke-width="1.4"/>
-        <circle cx="20" cy="7" r="2.1" fill="#B78A3C"/>
+  <div class="wrap">
+    <a href="index.html" class="logo">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M5 32 L20 7 L35 32" stroke="#A6822E" stroke-width="2"/>
+        <path d="M12.5 32 V19 H27.5 V32" stroke="#1C1C1C" stroke-width="1.4"/>
+        <circle cx="20" cy="7" r="2.1" fill="#A6822E"/>
       </svg>
       <span>
         <span class="logo-word">ARTHANI<em>SA</em></span>
         <span class="logo-sub">Design Studio · Thane</span>
       </span>
     </a>
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-panel">
-      <span>Menu</span>
-      <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
-    </button>
+    <div class="nav-menu">
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="projects.html">Our Projects</a></li>
+        <li><a href="contact.html" class="is-active">Contact</a></li>
+        <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+  </ul>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
   </div>
 </header>
 
-<div class="menu-panel" id="menu-panel" aria-hidden="true">
-  <div class="wrap menu-panel-inner">
-    <nav class="menu-main" aria-label="Main navigation">
-      <a href="index.html" >Home</a>
-      <a href="about.html" >About Us</a>
-      <a href="projects.html" >Our Projects</a>
-      <a href="contact.html" class="is-active">Contact</a>
-    </nav>
-    <aside class="menu-side">
-      <div class="menu-side-card">
-        <strong>Studio</strong>
-        <p>Architecture &amp; Interior Design<br>Thane, Mumbai</p>
-      </div>
-      <div class="menu-side-card">
-        <strong>Explore</strong>
-        <p>Vision · Our Team · Empanelment · Selected Projects</p>
-      </div>
-      <div class="menu-side-card">
-        <strong>Social Media</strong>
-        <div class="menu-social">
-          <a href="#" aria-label="Instagram">Instagram</a>
-          <a href="#" aria-label="LinkedIn">LinkedIn</a>
-        </div>
-      </div>
-    </aside>
-  </div>
-</div>
-
-<main>
-
+<!-- ================= PAGE HERO ================= -->
 <section class="page-hero">
+  <div class="hero-grid"></div>
   <div class="wrap">
-    <div class="eyebrow">Get in Touch</div>
-    <h1>Let’s talk about your project.</h1>
-    <p class="lede">A cleaner contact page based on the wireframe: studio details and map on one side, enquiry form on the other.</p>
+    <div class="eyebrow">Get in touch</div>
+    <h1>Let&rsquo;s talk about your project</h1>
+    <p class="lede">Tell us a little about the space you have in mind — scale, location, timeline — and the studio will get back to you.</p>
   </div>
 </section>
 
+<!-- ================= CONTACT LAYOUT ================= -->
 <section class="section">
   <div class="wrap contact-layout">
-    <div class="contact-copy reveal">
-      <div class="eyebrow">Studio Details</div>
-      <h2>Start a conversation.</h2>
-      <p class="lede">Use the details below to connect with the studio. Replace the placeholders with the client-approved contact information before launch.</p>
-      <div class="info-list">
-        <div class="info-row">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg>
-          <div><h4>Address</h4><p>Thane, Maharashtra, India<br><a href="https://www.google.com/maps/search/?api=1&query=Arthanisa+Design+Studio+Thane" target="_blank" rel="noopener">Open in Google Maps →</a></p></div>
-        </div>
-        <div class="info-row">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="1.4"/><path d="m3 6.5 9 6.5 9-6.5"/></svg>
-          <div><h4>Email</h4><p><a href="mailto:studio@arthanisa.com">studio@arthanisa.com</a></p></div>
-        </div>
-        <div class="info-row">
-          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7.9 9.9a16 16 0 0 0 6 6l1.4-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.9 2.2Z"/></svg>
-          <div><h4>Phone</h4><p><a href="tel:+910000000000">+91 00000 00000</a></p></div>
+
+    <div class="reveal">
+      <div class="eyebrow">Studio details</div>
+      <h2 style="font-size:clamp(24px,3vw,32px);">Arthanisa Design Studio</h2>
+
+      <div class="info-row">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-7.2 7-12a7 7 0 1 0-14 0c0 4.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.4"/></svg>
+        <div>
+          <h4>Studio address</h4>
+          <p>Thane, Maharashtra, India<br>
+          <a href="https://www.google.com/maps/place/Arthanisa+Design+Studio/@19.1889408,72.9808896,14z/data=!4m6!3m5!1s0x3be7b9397283a835:0x13fd551a2b413a5b!8m2!3d19.1911273!4d72.9771463!16s%2Fg%2F11vlcjfb_3" target="_blank" rel="noopener">Open in Google Maps →</a></p>
         </div>
       </div>
+
+      <div class="info-row">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z" opacity="0"/><path d="M3 6.5 12 13l9-6.5"/><rect x="3" y="5" width="18" height="14" rx="1.4"/></svg>
+        <div>
+          <h4>Email</h4>
+          <p><a href="mailto:studio@arthanisa.com">studio@arthanisa.com</a></p>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L7.9 9.9a16 16 0 0 0 6 6l1.4-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.9 2.2Z"/></svg>
+        <div>
+          <h4>Phone</h4>
+          <p><a href="tel:+910000000000">+91 00000 00000</a></p>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        <div>
+          <h4>Studio hours</h4>
+          <p>Monday – Saturday, 10:00 AM – 7:00 PM</p>
+        </div>
+      </div>
+
+      <p class="form-note" style="margin-top:24px;">Phone, email and hours above are placeholders — swap in the studio&rsquo;s real details before this site goes live.</p>
     </div>
 
-    <div class="contact-form reveal">
-      <div class="eyebrow">Send a Message</div>
+    <div class="reveal">
+      <div class="eyebrow">Send a message</div>
       <form id="contact-form">
-        <div class="form-grid">
-          <div class="form-field"><label for="name">Full name</label><input id="name" name="name" required></div>
-          <div class="form-field"><label for="email">Email</label><input id="email" name="email" type="email" required></div>
-          <div class="form-field"><label for="phone">Mobile number</label><input id="phone" name="phone" type="tel"></div>
-          <div class="form-field"><label for="service">Service</label><select id="service" name="service"><option>Architecture</option><option>Interiors</option><option>Landscaping</option><option>Liaison</option><option>Other</option></select></div>
-          <div class="form-field full"><label for="message">Project details</label><textarea id="message" name="message" required></textarea></div>
+        <div class="form-field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" name="name" required>
         </div>
-        <button class="btn btn--gold" type="submit">Submit Enquiry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <div class="form-field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-field">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+        <div class="form-field">
+          <label for="project">Project type</label>
+          <select id="project" name="project">
+            <option>Residential</option>
+            <option>Commercial</option>
+            <option>Interior Design</option>
+            <option>Institutional</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="message">Tell us about the project</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--gold">Send Message</button>
+        <p class="form-note" style="margin-top:16px;">This form is a front-end demo — connect it to your email or a form service (e.g. Formspree) before launch.</p>
       </form>
     </div>
+
   </div>
 
   <div class="wrap">
     <div class="map-wrap reveal">
-      <iframe src="https://www.google.com/maps?q=Arthanisa+Design+Studio,+Thane,+Maharashtra&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Arthanisa Design Studio location"></iframe>
+      <iframe
+        src="https://www.google.com/maps?q=Arthanisa+Design+Studio,+Thane,+Maharashtra&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Arthanisa Design Studio location"></iframe>
     </div>
   </div>
 </section>
 
-<section class="section section-border">
+<!-- ================= TESTIMONIALS ================= -->
+<section class="section section--dark">
   <div class="wrap">
-    <div class="eyebrow reveal">Client Feedback</div>
-    <h2 class="reveal" style="font-size:clamp(42px,5vw,68px);max-width:10ch">Testimonials.</h2>
-    <div class="testimonials">
-      <div class="testimonial reveal"><p>“Replace this with the client-approved testimonial so the contact page carries real social proof.”</p><span class="who">Client name · Project</span></div>
-      <div class="testimonial reveal"><p>“Replace this with a second approved client quote.”</p><span class="who">Client name · Project</span></div>
+    <div class="eyebrow reveal">Client feedback</div>
+    <h2 class="reveal" style="color:#FAFAFA; font-size:clamp(28px,3.6vw,44px); max-width:16ch;">What clients say</h2>
+
+    <div class="reveal">
+      <div class="testimonial">
+        <p>&ldquo;They understood exactly what we meant by &lsquo;home&rsquo; — not just a floor plan, but a place that actually felt like ours from day one.&rdquo;</p>
+        <span class="who">Residential client, Thane</span>
+      </div>
+      <div class="testimonial">
+        <p>&ldquo;Meticulous with detailing and completely dependable with approvals — the liaison support alone saved us months.&rdquo;</p>
+        <span class="who">Commercial client, Navi Mumbai</span>
+      </div>
+      <div class="testimonial">
+        <p>&ldquo;Simple, warm, honest — the studio&rsquo;s values on their website are exactly how the project actually went.&rdquo;</p>
+        <span class="who">Residential client, Kalyan</span>
+      </div>
     </div>
+    <p class="form-note reveal" style="margin-top:8px; color:#8A867B;">Sample testimonials shown — replace with real client quotes when available.</p>
   </div>
 </section>
 
-</main>
+<!-- ================= FOOTER ================= -->
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <span class="logo-word">ARTHANI<em>SA</em></span>
-        <p>Architecture &amp; interior design studio based in Thane, Mumbai.</p>
+        <span class="logo-word">ARTHANI<em style="color:#BC9A4C;font-style:normal;">SA</em></span>
+        <p>An architecture &amp; interior design studio based in Thane, Mumbai — planning, design, detailing and liaison services, under one roof.</p>
       </div>
       <div class="footer-col">
         <h5>Studio</h5>
@@ -136,30 +177,30 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="projects.html">Our Projects</a></li>
-          <li><a href="contact.html">Get in Touch</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Focus</h5>
+        <h5>Services</h5>
         <ul>
-          <li><a href="about.html">Architecture</a></li>
-          <li><a href="about.html">Interiors</a></li>
-          <li><a href="about.html">Landscaping</a></li>
-          <li><a href="about.html">Liaison</a></li>
+          <li><a href="about.html">Planning &amp; Design</a></li>
+          <li><a href="about.html">Interior Design</a></li>
+          <li><a href="about.html">Detailing &amp; Execution</a></li>
+          <li><a href="about.html">Liaison Services</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Connect</h5>
+        <h5>Studio, Thane</h5>
         <ul>
-          <li><a href="contact.html">Studio details</a></li>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">LinkedIn</a></li>
+          <li><a href="https://www.google.com/maps/place/Arthanisa+Design+Studio/@19.1889408,72.9808896,14z" target="_blank" rel="noopener">Get Directions</a></li>
+          <li><a href="mailto:studio@arthanisa.com">studio@arthanisa.com</a></li>
+          <li><a href="tel:+910000000000">+91 00000 00000</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Arthanisa Design Studio</span>
-      <span>Thane · Mumbai</span>
+      <span>&copy; 2026 Arthanisa Design Studio. All rights reserved.</span>
+      <span>Design &amp; Interiors, Thane · Mumbai</span>
     </div>
   </div>
 </footer>

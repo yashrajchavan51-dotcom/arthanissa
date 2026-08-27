@@ -1,80 +1,85 @@
+// Header scroll state
 const header = document.querySelector('.site-header');
-const menuToggle = document.querySelector('.menu-toggle');
-const menuPanel = document.querySelector('.menu-panel');
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+const navMenu = document.querySelector('.nav-menu');
 
-function setHeaderState(){
-  if(!header) return;
-  header.classList.toggle('is-scrolled', window.scrollY > 36);
-}
-setHeaderState();
-window.addEventListener('scroll', setHeaderState, {passive:true});
+const closeMenu = () => {
+  if (navLinks) navLinks.classList.remove('is-open');
+  if (navToggle) navToggle.classList.remove('is-active');
+};
 
-function setMenu(open){
-  if(!menuToggle || !menuPanel) return;
-  menuToggle.classList.toggle('is-active', open);
-  menuToggle.setAttribute('aria-expanded', String(open));
-  menuPanel.classList.toggle('is-open', open);
-  menuPanel.setAttribute('aria-hidden', String(!open));
-  document.body.classList.toggle('menu-open', open);
-}
+const onScroll = () => {
+  const wasScrolled = header.classList.contains('is-scrolled');
+  const isScrolled = window.scrollY > 40;
+  if (isScrolled !== wasScrolled) {
+    header.classList.toggle('is-scrolled', isScrolled);
+    closeMenu(); // crossing the scroll threshold changes the menu's layout — always start closed
+  }
+};
+onScroll();
+window.addEventListener('scroll', onScroll, { passive: true });
 
-if(menuToggle && menuPanel){
-  menuToggle.addEventListener('click', () => {
-    setMenu(!menuPanel.classList.contains('is-open'));
+// Menu toggle (full row up top on wide screens; compact dropdown once scrolled or on narrow screens)
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navLinks.classList.toggle('is-open');
+    navToggle.classList.toggle('is-active');
   });
-  menuPanel.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => setMenu(false));
+  navLinks.querySelectorAll('a').forEach(a =>
+    a.addEventListener('click', closeMenu)
+  );
+  document.addEventListener('click', (e) => {
+    if (navMenu && !navMenu.contains(e.target)) closeMenu();
   });
-  document.addEventListener('keydown', e => {
-    if(e.key === 'Escape') setMenu(false);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
   });
 }
 
+// Scroll reveal
 const revealEls = document.querySelectorAll('.reveal');
-if('IntersectionObserver' in window){
-  const observer = new IntersectionObserver(entries => {
+if ('IntersectionObserver' in window) {
+  const io = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if(entry.isIntersecting){
+      if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
+        io.unobserve(entry.target);
       }
     });
-  }, {threshold:.12, rootMargin:'0px 0px -45px 0px'});
-  revealEls.forEach(el => observer.observe(el));
-}else{
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  revealEls.forEach(el => io.observe(el));
+} else {
   revealEls.forEach(el => el.classList.add('is-visible'));
 }
 
-/* Projects filter */
-const filters = document.querySelectorAll('.filter-btn');
-const projects = document.querySelectorAll('.editorial-project');
-if(filters.length){
-  filters.forEach(button => {
-    button.addEventListener('click', () => {
-      filters.forEach(b => b.classList.remove('is-active'));
-      button.classList.add('is-active');
-      const filter = button.dataset.filter;
-      projects.forEach(project => {
-        project.classList.toggle('is-hidden', filter !== 'all' && project.dataset.cat !== filter);
+// Project filter (projects.html)
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card, .project-feature');
+if (filterButtons.length) {
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterButtons.forEach(b => b.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      const filter = btn.dataset.filter;
+      projectCards.forEach(card => {
+        const match = filter === 'all' || card.dataset.cat === filter;
+        card.classList.toggle('is-hidden', !match);
       });
     });
   });
 }
 
-/* Contact demo */
-const form = document.querySelector('#contact-form');
-if(form){
-  form.addEventListener('submit', e => {
+// Contact form (static demo — no backend wired up)
+const contactForm = document.querySelector('#contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    const button = form.querySelector('button[type="submit"]');
-    if(!button) return;
-    const original = button.innerHTML;
-    button.textContent = 'Message sent';
-    button.disabled = true;
-    setTimeout(() => {
-      form.reset();
-      button.innerHTML = original;
-      button.disabled = false;
-    }, 2400);
+    const btn = contactForm.querySelector('button[type="submit"]');
+    const original = btn.textContent;
+    btn.textContent = 'Message sent';
+    btn.disabled = true;
+    setTimeout(() => { btn.textContent = original; btn.disabled = false; contactForm.reset(); }, 2600);
   });
 }
