@@ -1,333 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Our Projects — Arthanisa Design Studio</title>
-<meta name="description" content="Residential, commercial and institutional architecture and interior design projects by Arthanisa Design Studio, Thane.">
+<meta name="description" content="Architecture, interiors and landscaping portfolio for Arthanisa Design Studio.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<!-- ================= HEADER ================= -->
 <header class="site-header">
-  <div class="wrap">
-    <a href="index.html" class="logo">
-      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M5 32 L20 7 L35 32" stroke="#A6822E" stroke-width="2"/>
-        <path d="M12.5 32 V19 H27.5 V32" stroke="#1C1C1C" stroke-width="1.4"/>
-        <circle cx="20" cy="7" r="2.1" fill="#A6822E"/>
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo" aria-label="Arthanisa Design Studio home">
+      <svg class="logo-mark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <path d="M5 32 L20 7 L35 32" stroke="#B78A3C" stroke-width="2"/>
+        <path d="M12.5 32 V19 H27.5 V32" stroke="#222321" stroke-width="1.4"/>
+        <circle cx="20" cy="7" r="2.1" fill="#B78A3C"/>
       </svg>
       <span>
         <span class="logo-word">ARTHANI<em>SA</em></span>
         <span class="logo-sub">Design Studio · Thane</span>
       </span>
     </a>
-    <div class="nav-menu">
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="projects.html" class="is-active">Our Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
-  </ul>
-      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-    </div>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-panel">
+      <span>Menu</span>
+      <span class="menu-icon" aria-hidden="true"><i></i><i></i></span>
+    </button>
   </div>
 </header>
 
-<!-- ================= PAGE HERO ================= -->
+<div class="menu-panel" id="menu-panel" aria-hidden="true">
+  <div class="wrap menu-panel-inner">
+    <nav class="menu-main" aria-label="Main navigation">
+      <a href="index.html" >Home</a>
+      <a href="about.html" >About Us</a>
+      <a href="projects.html" class="is-active">Our Projects</a>
+      <a href="contact.html" >Contact</a>
+    </nav>
+    <aside class="menu-side">
+      <div class="menu-side-card">
+        <strong>Studio</strong>
+        <p>Architecture &amp; Interior Design<br>Thane, Mumbai</p>
+      </div>
+      <div class="menu-side-card">
+        <strong>Explore</strong>
+        <p>Vision · Our Team · Empanelment · Selected Projects</p>
+      </div>
+      <div class="menu-side-card">
+        <strong>Social Media</strong>
+        <div class="menu-social">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</div>
+
+<main>
+
 <section class="page-hero">
-  <div class="hero-grid"></div>
   <div class="wrap">
-    <div class="eyebrow">Our projects</div>
-    <h1>Work across residences, interiors &amp; institutions</h1>
-    <p class="lede">A selection of projects planned, designed and detailed by the studio — from single apartments to institutional buildings, across Thane and Mumbai.</p>
+    <div class="eyebrow">Our Projects</div>
+    <h1>Architecture, interiors &amp; landscapes — one project at a time.</h1>
+    <p class="lede">The project page now follows the supplied StudioMAT-style reference: large project imagery, project metadata, a short brief and a location-map block.</p>
   </div>
 </section>
 
-<!-- ================= FILTERABLE GRID ================= -->
 <section class="section">
   <div class="wrap">
-    <div class="filter-bar reveal">
-      <button class="filter-btn is-active" data-filter="all">All Work</button>
-      <button class="filter-btn" data-filter="residential">Residential</button>
-      <button class="filter-btn" data-filter="commercial">Commercial</button>
-      <button class="filter-btn" data-filter="interior">Interiors</button>
-      <button class="filter-btn" data-filter="institutional">Institutional</button>
+    <div class="projects-intro">
+      <div><div class="eyebrow reveal">Portfolio</div><h2 class="reveal">Selected work.</h2></div>
+      <div class="project-filters reveal" role="tablist" aria-label="Project categories">
+        <button class="filter-btn is-active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="architecture">Architecture</button>
+        <button class="filter-btn" data-filter="interiors">Interiors</button>
+        <button class="filter-btn" data-filter="landscaping">Landscaping</button>
+      </div>
     </div>
 
-    <div class="project-list">
-
-      <article class="project-feature reveal" data-cat="residential">
-        <div class="pf-media">
-          <div class="pf-tile pf-map">
-            <svg viewBox="0 0 200 200" width="60%" height="60%">
-              <g stroke="#A6822E" stroke-width="1" opacity="0.7" fill="none">
-                <circle cx="100" cy="80" r="26"/>
-                <path d="M100 106 L100 150"/>
-                <path d="M60 150 H140"/>
-              </g>
-            </svg>
+    <article class="editorial-project reveal" data-cat="architecture">
+      <div class="project-label-row"><h3>Architecture</h3><span>Project 01</span></div>
+      <div class="project-layout">
+        <div class="project-visuals">
+          <div class="project-image large"><span class="image-mark">01</span><span class="image-label">Project Image 01</span></div>
+          <div class="project-image"><span class="image-mark">02</span><span class="image-label">Project Image 02</span></div>
+          <div class="project-image"><span class="image-mark">MAP</span><span class="image-label">Location on map</span><div class="map-pin"></div></div>
+        </div>
+        <div class="project-info">
+          <div><h4>Architecture</h4><h3>Project Title</h3><p>Brief of the project — replace with the final client-approved description. The layout is deliberately spacious so the photography remains the focus.</p></div>
+          <div class="project-meta">
+            <div><span>Location</span><strong>Location</strong></div><div><span>Client</span><strong>Client name</strong></div><div><span>Year of completion</span><strong>20XX</strong></div><div><span>Scope</span><strong>Architecture</strong></div>
           </div>
-          <div class="pf-tile"></div>
-          <div class="pf-tile"></div>
         </div>
-        <div class="pf-meta">
-          <span class="tag">Residential</span>
-          <h3>The Choupane Residence</h3>
-          <dl class="pf-specs">
-            <div><dt>Year</dt><dd>2024</dd></div>
-            <div><dt>Type</dt><dd>Residential</dd></div>
-            <div><dt>Status</dt><dd>Completed</dd></div>
-            <div><dt>Size</dt><dd>2,400 sqft</dd></div>
-          </dl>
-          <span class="loc">Thane, Maharashtra</span>
-        </div>
-      </article>
+      </div>
+    </article>
 
-      <article class="project-feature reveal" data-cat="interior">
-        <div class="pf-media">
-          <div class="pf-tile pf-map">
-            <svg viewBox="0 0 200 200" width="60%" height="60%">
-              <g stroke="#A6822E" stroke-width="1" opacity="0.7" fill="none">
-                <circle cx="100" cy="80" r="26"/>
-                <path d="M100 106 L100 150"/>
-                <path d="M60 150 H140"/>
-              </g>
-            </svg>
+    <article class="editorial-project reveal" data-cat="interiors">
+      <div class="project-label-row"><h3>Interiors</h3><span>Project 02</span></div>
+      <div class="project-layout">
+        <div class="project-visuals">
+          <div class="project-image large"><span class="image-mark">01</span><span class="image-label">Project Image 01</span></div>
+          <div class="project-image"><span class="image-mark">02</span><span class="image-label">Project Image 02</span></div>
+          <div class="project-image"><span class="image-mark">MAP</span><span class="image-label">Location on map</span><div class="map-pin"></div></div>
+        </div>
+        <div class="project-info">
+          <div><h4>Interiors</h4><h3>Project Title</h3><p>Brief of the project — replace with the final client-approved description. This section is designed to accept two photographs and a location reference.</p></div>
+          <div class="project-meta">
+            <div><span>Location</span><strong>Location</strong></div><div><span>Client</span><strong>Client name</strong></div><div><span>Year of completion</span><strong>20XX</strong></div><div><span>Scope</span><strong>Interiors</strong></div>
           </div>
-          <div class="pf-tile"></div>
-          <div class="pf-tile"></div>
         </div>
-        <div class="pf-meta">
-          <span class="tag">Interior</span>
-          <h3>Panvel Apartment Interiors</h3>
-          <dl class="pf-specs">
-            <div><dt>Year</dt><dd>2024</dd></div>
-            <div><dt>Type</dt><dd>Interior Fit-out</dd></div>
-            <div><dt>Status</dt><dd>Completed</dd></div>
-            <div><dt>Size</dt><dd>1,150 sqft</dd></div>
-          </dl>
-          <span class="loc">Navi Mumbai</span>
-        </div>
-      </article>
+      </div>
+    </article>
 
-      <article class="project-feature reveal" data-cat="institutional">
-        <div class="pf-media">
-          <div class="pf-tile pf-map">
-            <svg viewBox="0 0 200 200" width="60%" height="60%">
-              <g stroke="#A6822E" stroke-width="1" opacity="0.7" fill="none">
-                <circle cx="100" cy="80" r="26"/>
-                <path d="M100 106 L100 150"/>
-                <path d="M60 150 H140"/>
-              </g>
-            </svg>
+    <article class="editorial-project reveal" data-cat="landscaping">
+      <div class="project-label-row"><h3>Landscaping</h3><span>Project 03</span></div>
+      <div class="project-layout">
+        <div class="project-visuals">
+          <div class="project-image large"><span class="image-mark">01</span><span class="image-label">Project Image 01</span></div>
+          <div class="project-image"><span class="image-mark">02</span><span class="image-label">Project Image 02</span></div>
+          <div class="project-image"><span class="image-mark">MAP</span><span class="image-label">Location on map</span><div class="map-pin"></div></div>
+        </div>
+        <div class="project-info">
+          <div><h4>Landscaping</h4><h3>Project Title</h3><p>Brief of the project — replace with the final client-approved description, photographs and landscape-specific details.</p></div>
+          <div class="project-meta">
+            <div><span>Location</span><strong>Location</strong></div><div><span>Client</span><strong>Client name</strong></div><div><span>Year of completion</span><strong>20XX</strong></div><div><span>Scope</span><strong>Landscaping</strong></div>
           </div>
-          <div class="pf-tile"></div>
-          <div class="pf-tile"></div>
         </div>
-        <div class="pf-meta">
-          <span class="tag">Institutional</span>
-          <h3>Community Resource Centre</h3>
-          <dl class="pf-specs">
-            <div><dt>Year</dt><dd>2023</dd></div>
-            <div><dt>Type</dt><dd>Institutional</dd></div>
-            <div><dt>Status</dt><dd>Under Construction</dd></div>
-            <div><dt>Size</dt><dd>8,600 sqft</dd></div>
-          </dl>
-          <span class="loc">Thane Municipal Corporation</span>
-        </div>
-      </article>
-
-      <article class="project-feature reveal" data-cat="commercial">
-        <div class="pf-media">
-          <div class="pf-tile pf-map">
-            <svg viewBox="0 0 200 200" width="60%" height="60%">
-              <g stroke="#A6822E" stroke-width="1" opacity="0.7" fill="none">
-                <circle cx="100" cy="80" r="26"/>
-                <path d="M100 106 L100 150"/>
-                <path d="M60 150 H140"/>
-              </g>
-            </svg>
-          </div>
-          <div class="pf-tile"></div>
-          <div class="pf-tile"></div>
-        </div>
-        <div class="pf-meta">
-          <span class="tag">Commercial</span>
-          <h3>Ghodbunder Road Showroom</h3>
-          <dl class="pf-specs">
-            <div><dt>Year</dt><dd>2023</dd></div>
-            <div><dt>Type</dt><dd>Commercial</dd></div>
-            <div><dt>Status</dt><dd>Completed</dd></div>
-            <div><dt>Size</dt><dd>3,200 sqft</dd></div>
-          </dl>
-          <span class="loc">Thane, Maharashtra</span>
-        </div>
-      </article>
-
-      <article class="project-feature reveal" data-cat="residential">
-        <div class="pf-media">
-          <div class="pf-tile pf-map">
-            <svg viewBox="0 0 200 200" width="60%" height="60%">
-              <g stroke="#A6822E" stroke-width="1" opacity="0.7" fill="none">
-                <circle cx="100" cy="80" r="26"/>
-                <path d="M100 106 L100 150"/>
-                <path d="M60 150 H140"/>
-              </g>
-            </svg>
-          </div>
-          <div class="pf-tile"></div>
-          <div class="pf-tile"></div>
-        </div>
-        <div class="pf-meta">
-          <span class="tag">Residential</span>
-          <h3>Hiranandani Estate Bungalow</h3>
-          <dl class="pf-specs">
-            <div><dt>Year</dt><dd>2022</dd></div>
-            <div><dt>Type</dt><dd>Residential</dd></div>
-            <div><dt>Status</dt><dd>Completed</dd></div>
-            <div><dt>Size</dt><dd>4,800 sqft</dd></div>
-          </dl>
-          <span class="loc">Thane, Maharashtra</span>
-        </div>
-      </article>
-
-      <article class="project-feature reveal" data-cat="interior">
-        <div class="pf-media">
-          <div class="pf-tile pf-map">
-            <svg viewBox="0 0 200 200" width="60%" height="60%">
-              <g stroke="#A6822E" stroke-width="1" opacity="0.7" fill="none">
-                <circle cx="100" cy="80" r="26"/>
-                <path d="M100 106 L100 150"/>
-                <path d="M60 150 H140"/>
-              </g>
-            </svg>
-          </div>
-          <div class="pf-tile"></div>
-          <div class="pf-tile"></div>
-        </div>
-        <div class="pf-meta">
-          <span class="tag">Interior</span>
-          <h3>Wagle Estate Office Fit-out</h3>
-          <dl class="pf-specs">
-            <div><dt>Year</dt><dd>2024</dd></div>
-            <div><dt>Type</dt><dd>Interior Fit-out</dd></div>
-            <div><dt>Status</dt><dd>Completed</dd></div>
-            <div><dt>Size</dt><dd>2,000 sqft</dd></div>
-          </dl>
-          <span class="loc">Thane, Maharashtra</span>
-        </div>
-      </article>
-
-      <article class="project-feature reveal" data-cat="commercial">
-        <div class="pf-media">
-          <div class="pf-tile pf-map">
-            <svg viewBox="0 0 200 200" width="60%" height="60%">
-              <g stroke="#A6822E" stroke-width="1" opacity="0.7" fill="none">
-                <circle cx="100" cy="80" r="26"/>
-                <path d="M100 106 L100 150"/>
-                <path d="M60 150 H140"/>
-              </g>
-            </svg>
-          </div>
-          <div class="pf-tile"></div>
-          <div class="pf-tile"></div>
-        </div>
-        <div class="pf-meta">
-          <span class="tag">Commercial</span>
-          <h3>Kalyan Retail Complex</h3>
-          <dl class="pf-specs">
-            <div><dt>Year</dt><dd>2022</dd></div>
-            <div><dt>Type</dt><dd>Commercial</dd></div>
-            <div><dt>Status</dt><dd>Completed</dd></div>
-            <div><dt>Size</dt><dd>12,400 sqft</dd></div>
-          </dl>
-          <span class="loc">Kalyan, Maharashtra</span>
-        </div>
-      </article>
-
-      <article class="project-feature reveal" data-cat="institutional">
-        <div class="pf-media">
-          <div class="pf-tile pf-map">
-            <svg viewBox="0 0 200 200" width="60%" height="60%">
-              <g stroke="#A6822E" stroke-width="1" opacity="0.7" fill="none">
-                <circle cx="100" cy="80" r="26"/>
-                <path d="M100 106 L100 150"/>
-                <path d="M60 150 H140"/>
-              </g>
-            </svg>
-          </div>
-          <div class="pf-tile"></div>
-          <div class="pf-tile"></div>
-        </div>
-        <div class="pf-meta">
-          <span class="tag">Institutional</span>
-          <h3>MHADA Housing Cluster — Design Study</h3>
-          <dl class="pf-specs">
-            <div><dt>Year</dt><dd>2023</dd></div>
-            <div><dt>Type</dt><dd>Institutional</dd></div>
-            <div><dt>Status</dt><dd>Design Study</dd></div>
-            <div><dt>Size</dt><dd>—</dd></div>
-          </dl>
-          <span class="loc">Mumbai Metropolitan Region</span>
-        </div>
-      </article>
-
-      <article class="project-feature reveal" data-cat="residential">
-        <div class="pf-media">
-          <div class="pf-tile pf-map">
-            <svg viewBox="0 0 200 200" width="60%" height="60%">
-              <g stroke="#A6822E" stroke-width="1" opacity="0.7" fill="none">
-                <circle cx="100" cy="80" r="26"/>
-                <path d="M100 106 L100 150"/>
-                <path d="M60 150 H140"/>
-              </g>
-            </svg>
-          </div>
-          <div class="pf-tile"></div>
-          <div class="pf-tile"></div>
-        </div>
-        <div class="pf-meta">
-          <span class="tag">Residential</span>
-          <h3>Ghodbunder Weekend Home</h3>
-          <dl class="pf-specs">
-            <div><dt>Year</dt><dd>2021</dd></div>
-            <div><dt>Type</dt><dd>Residential</dd></div>
-            <div><dt>Status</dt><dd>Completed</dd></div>
-            <div><dt>Size</dt><dd>1,900 sqft</dd></div>
-          </dl>
-          <span class="loc">Thane, Maharashtra</span>
-        </div>
-      </article>
-
-    </div>
-
-    <p class="tag reveal" style="margin-top:40px; color:var(--grey-text);">Placeholder map pins and photo tiles shown above, with sample specs — swap in real project photography, maps and figures as they become available.</p>
+      </div>
+    </article>
   </div>
 </section>
 
-<!-- ================= CTA ================= -->
 <section class="cta-band">
   <div class="wrap">
-    <div class="eyebrow reveal" style="justify-content:center;">Start a project</div>
-    <h2 class="reveal">Don&rsquo;t see what you&rsquo;re looking for? Tell us about your project.</h2>
-    <div class="cta-actions reveal">
-      <a href="contact.html" class="btn btn--gold">Get in Touch</a>
-    </div>
+    <div class="eyebrow reveal" style="justify-content:center">Start a Project</div>
+    <h2 class="reveal">Have a project in mind?</h2>
+    <div class="cta-actions reveal"><a class="btn btn--gold" href="contact.html">Get in Touch</a></div>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
+</main>
 <footer class="site-footer">
   <div class="wrap">
     <div class="footer-top">
       <div class="footer-brand">
-        <span class="logo-word">ARTHANI<em style="color:#BC9A4C;font-style:normal;">SA</em></span>
-        <p>An architecture &amp; interior design studio based in Thane, Mumbai — planning, design, detailing and liaison services, under one roof.</p>
+        <span class="logo-word">ARTHANI<em>SA</em></span>
+        <p>Architecture &amp; interior design studio based in Thane, Mumbai.</p>
       </div>
       <div class="footer-col">
         <h5>Studio</h5>
@@ -335,30 +154,30 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About Us</a></li>
           <li><a href="projects.html">Our Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Get in Touch</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Services</h5>
+        <h5>Focus</h5>
         <ul>
-          <li><a href="about.html">Planning &amp; Design</a></li>
-          <li><a href="about.html">Interior Design</a></li>
-          <li><a href="about.html">Detailing &amp; Execution</a></li>
-          <li><a href="about.html">Liaison Services</a></li>
+          <li><a href="about.html">Architecture</a></li>
+          <li><a href="about.html">Interiors</a></li>
+          <li><a href="about.html">Landscaping</a></li>
+          <li><a href="about.html">Liaison</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Studio, Thane</h5>
+        <h5>Connect</h5>
         <ul>
-          <li><a href="https://www.google.com/maps/place/Arthanisa+Design+Studio/@19.1889408,72.9808896,14z" target="_blank" rel="noopener">Get Directions</a></li>
-          <li><a href="mailto:studio@arthanisa.com">studio@arthanisa.com</a></li>
-          <li><a href="tel:+910000000000">+91 00000 00000</a></li>
+          <li><a href="contact.html">Studio details</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">LinkedIn</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Arthanisa Design Studio. All rights reserved.</span>
-      <span>Design &amp; Interiors, Thane · Mumbai</span>
+      <span>© 2026 Arthanisa Design Studio</span>
+      <span>Thane · Mumbai</span>
     </div>
   </div>
 </footer>
