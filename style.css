@@ -418,6 +418,8 @@ button{ font-family:inherit; }
 .value-item{ padding-top:22px; border-top:1px solid var(--grey-line); }
 .value-item h4{ font-size:17px; margin-bottom:8px; }
 .value-item p{ color:var(--grey-text); font-size:14px; margin:0; }
+.section--dark .value-item{ border-top-color:#6B6B68; }
+.section--dark .value-item p{ color:#C9C5BA; }
 @media (max-width:880px){ .value-list{ grid-template-columns:repeat(2,1fr); } }
 @media (max-width:520px){ .value-list{ grid-template-columns:1fr; } }
 
