@@ -18,10 +18,14 @@
   --grey-text:  #68696A;
   --grey-line:  #C7C7C4;
 
-  /* gold — used sparingly, as an accent only */
+  /* gold foil — pulled up from an accent into a true second theme colour,
+     to match the foil-stamped grey/charcoal cards this palette is built from */
   --gold:       #A6822E;
   --gold-2:     #BC9A4C;
   --gold-soft:  rgba(166,130,46,0.14);
+  --gold-line:  rgba(166,130,46,0.4);
+  --gold-deep:  #8A6A24;
+  --onyx:       #1A1A1A;
 
   --white:      #FAFAFA;
 
@@ -88,7 +92,7 @@ button{ font-family:inherit; }
 .section--tight{ padding:clamp(40px,6vw,72px) 0; }
 .section--dark{ background:var(--charcoal); color:var(--paper); }
 .section--dark .eyebrow{ color:var(--gold-2); }
-.grid-line-top{ border-top:1px solid var(--grey-line); }
+.grid-line-top{ border-top:1px solid var(--gold-line); }
 .center{ text-align:center; }
 .lede{
   font-size:clamp(17px,1.4vw,19px);
@@ -110,13 +114,26 @@ button{ font-family:inherit; }
   font-weight:600;
   background:transparent;
   cursor:pointer;
+  position:relative;
+  overflow:hidden;
   transition:background .35s var(--ease), color .35s var(--ease), border-color .35s var(--ease);
 }
 .btn:hover{ background:var(--ink); color:var(--white); }
 .btn--gold{ border-color:var(--gold); background:var(--gold); color:var(--white); }
 .btn--gold:hover{ background:var(--gold-2); border-color:var(--gold-2); color:var(--white); }
+.btn--gold::after{
+  content:"";
+  position:absolute; top:0; left:-60%; width:40%; height:100%;
+  background:linear-gradient(115deg, transparent, rgba(255,255,255,0.45), transparent);
+  transform:skewX(-18deg);
+  transition:left .6s var(--ease);
+  pointer-events:none;
+}
+.btn--gold:hover::after{ left:130%; }
 .btn--on-dark{ border-color:var(--paper); color:var(--paper); }
 .btn--on-dark:hover{ background:var(--paper); color:var(--ink); }
+.btn--foil{ border-color:var(--gold-line); color:var(--gold-deep); }
+.btn--foil:hover{ background:var(--gold); border-color:var(--gold); color:var(--white); }
 .btn svg{ width:14px; height:14px; transition:transform .35s var(--ease); }
 .btn:hover svg{ transform:translateX(4px); }
 
@@ -154,8 +171,16 @@ button{ font-family:inherit; }
 }
 .site-header .wrap{ display:flex; align-items:center; justify-content:space-between; gap:20px; }
 
-.logo{ display:flex; align-items:center; gap:12px; position:relative; z-index:101; flex:none; }
-.logo-mark{ width:34px; height:34px; flex:none; }
+.logo{ display:flex; align-items:center; gap:14px; position:relative; z-index:101; flex:none; }
+.logo-badge{
+  display:flex; align-items:center; justify-content:center;
+  width:46px; height:46px; flex:none; border-radius:50%;
+  border:1px solid var(--gold-line);
+  background:rgba(166,130,46,0.08);
+  transition:border-color .4s var(--ease), background .4s var(--ease);
+}
+.site-header.is-scrolled .logo-badge{ border-color:var(--gold); background:var(--gold-soft); }
+.logo-mark{ width:22px; height:22px; flex:none; }
 .logo-mark path{ transition:stroke .4s var(--ease); }
 .logo-word{
   font-family:var(--font-display);
@@ -359,7 +384,13 @@ button{ font-family:inherit; }
   color:var(--paper);
   overflow:hidden;
 }
+.page-hero::before{
+  content:""; position:absolute; inset:-20% -10% auto -10%; height:80%;
+  background:radial-gradient(55% 60% at 78% 15%, rgba(166,130,46,0.16), transparent 70%);
+  pointer-events:none;
+}
 .page-hero .hero-grid{ mask-image:linear-gradient(to bottom, rgba(0,0,0,.9), rgba(0,0,0,.35)); }
+.page-hero .wrap{ position:relative; z-index:1; }
 .page-hero h1{ font-size:clamp(38px,5.6vw,64px); color:var(--white); max-width:14ch; }
 .page-hero .lede{ color:#B9B5AA; max-width:560px; }
 .page-hero .eyebrow{ color:var(--gold-2); }
@@ -386,7 +417,7 @@ button{ font-family:inherit; }
 .name-teaser .lede{ margin:0 auto 24px; }
 
 /* ---------- number cards / expertise ---------- */
-.card-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--grey-line); margin-top:56px; }
+.card-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--gold-line); margin-top:56px; }
 .exp-card{ background:var(--paper); padding:40px 32px; position:relative; }
 .exp-card .num{ font-family:var(--font-display); font-style:italic; color:var(--gold); font-size:14px; margin-bottom:24px; display:block; }
 .exp-card h3{ font-size:21px; margin-bottom:12px; }
@@ -394,7 +425,7 @@ button{ font-family:inherit; }
 @media (max-width:880px){ .card-grid{ grid-template-columns:1fr; } }
 
 /* ---------- founders ---------- */
-.founders{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--grey-line); margin-top:56px; }
+.founders{ display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--gold-line); margin-top:56px; }
 .founder{ background:var(--paper); padding:44px; }
 .founder-photo{
   width:100%; aspect-ratio:4/5; margin-bottom:28px;
@@ -403,6 +434,10 @@ button{ font-family:inherit; }
     linear-gradient(160deg, var(--paper-3), var(--paper-2));
   position:relative; overflow:hidden;
   border:1px solid var(--grey-line);
+}
+.founder-photo::after{
+  content:""; position:absolute; inset:12px;
+  border:1px solid var(--gold-line); pointer-events:none;
 }
 .founder-photo .initials{
   position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
@@ -424,7 +459,7 @@ button{ font-family:inherit; }
 @media (max-width:520px){ .value-list{ grid-template-columns:1fr; } }
 
 /* ---------- engagements / empanelled bodies, with a logo mark each ---------- */
-.org-badges{ display:flex; flex-wrap:wrap; gap:1px; background:var(--grey-line); margin-top:16px; }
+.org-badges{ display:flex; flex-wrap:wrap; gap:1px; background:var(--gold-line); margin-top:16px; }
 .org-badge{
   flex:1 1 220px; min-height:96px; padding:20px 22px;
   background:var(--paper);
@@ -433,6 +468,7 @@ button{ font-family:inherit; }
 .org-badge .mark{
   flex:none; width:48px; height:48px; border-radius:50%;
   background:var(--charcoal); color:var(--paper);
+  border:1px solid var(--gold-line);
   display:flex; align-items:center; justify-content:center;
   font-family:var(--font-display); font-size:14px; font-weight:600; letter-spacing:.02em;
 }
@@ -476,6 +512,10 @@ button{ font-family:inherit; }
   display:flex; align-items:center; justify-content:center;
   background:var(--paper-2);
 }
+.pf-tile.pf-map::after{
+  content:""; position:absolute; inset:14px;
+  border:1px solid var(--gold-line); pointer-events:none;
+}
 .pf-meta h3{ font-size:clamp(21px,2.2vw,26px); margin:6px 0 0; }
 .pf-meta .tag{ display:block; margin-bottom:6px; }
 .pf-specs{
@@ -494,8 +534,9 @@ button{ font-family:inherit; }
 .project-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:36px; }
 .project-card{
   display:block; border:1px solid var(--grey-line); overflow:hidden; background:var(--paper);
-  transition:transform .1s;
+  transition:transform .1s, border-color .3s var(--ease);
 }
+.project-card:hover{ border-color:var(--gold); }
 .project-thumb{
   aspect-ratio:5/4; position:relative; overflow:hidden;
   background:
@@ -520,7 +561,7 @@ button{ font-family:inherit; }
 /* ---------- process / offer grid (2x2 compact boxes) ---------- */
 .process-grid{
   display:grid; grid-template-columns:repeat(2,1fr); gap:1px;
-  background:var(--grey-line); margin-top:56px;
+  background:var(--gold-line); margin-top:56px;
 }
 .process-box{
   background:var(--paper);
@@ -540,9 +581,11 @@ button{ font-family:inherit; }
 /* ---------- testimonials ---------- */
 .testimonial{
   border-top:1px solid #413F39; padding:36px 0; display:grid; grid-template-columns:1fr auto; gap:24px; align-items:start;
+  position:relative;
 }
 .testimonial:last-child{ border-bottom:1px solid #413F39; }
 .testimonial p{ font-family:var(--font-display); font-style:italic; font-size:clamp(18px,2vw,23px); margin:0 0 14px; color:var(--white); line-height:1.45; }
+.testimonial p::before{ content:"\201C"; color:var(--gold-2); font-style:normal; margin-right:4px; }
 .testimonial .who{ font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--gold-2); }
 @media (max-width:700px){ .testimonial{ grid-template-columns:1fr; } }
 
@@ -602,5 +645,9 @@ button{ font-family:inherit; }
     linear-gradient(155deg, var(--paper-3), var(--paper-2));
   border:1px solid var(--grey-line);
   position:relative;
+}
+.figure-panel::after{
+  content:""; position:absolute; inset:14px;
+  border:1px solid var(--gold-line); pointer-events:none; z-index:1;
 }
 .figure-panel svg{ position:absolute; inset:0; }
